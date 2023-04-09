@@ -1,0 +1,91 @@
+openapi: 3.0.3
+info:
+  title: PET KARE API
+  version: 1.0.0
+  description: Aplicação simples para ajudar donos de Pet Shop a guardar dados de
+    animais
+paths:
+  /api/pets/:
+    get:
+      operationId: api_pets_retrieve
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+    post:
+      operationId: api_pets_create
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/pets/{pet_id}/:
+    get:
+      operationId: api_pets_retrieve_2
+      parameters:
+      - in: path
+        name: pet_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+    patch:
+      operationId: api_pets_partial_update
+      parameters:
+      - in: path
+        name: pet_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+    delete:
+      operationId: api_pets_destroy
+      parameters:
+      - in: path
+        name: pet_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
