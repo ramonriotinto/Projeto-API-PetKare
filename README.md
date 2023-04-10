@@ -97,7 +97,7 @@ python manage.py runserver
 ## url: http://127.0.0.1:8000/
 
 ```
-Endpoint: api/pest/
+Endpoint: api/pets/
 Verbo HTTP: POST
 Objetivo: Cadastrar pet
 ```
@@ -105,25 +105,25 @@ Objetivo: Cadastrar pet
 ![Sem títulodoc](https://user-images.githubusercontent.com/103224186/230748121-48134458-97ce-4ddd-aba5-6486a34a8ac6.png)
 
 ```
-Endpoint: api/pest/
+Endpoint: api/pets/
 Verbo HTTP: GET
 Objetivo: listar pets
 ```
 
 ```
-Endpoint: api/pest/<pet_id>/
+Endpoint: api/pets/<pet_id>/
 Verbo HTTP: POST
 Objetivo: Filtragem de pet
 ```
 
 ```
-Endpoint: api/pest/<pet_id>/
+Endpoint: api/pets/<pet_id>/
 Verbo HTTP: PATCH
 Objetivo: Atualização de pet
 ```
 
 ```
-Endpoint: api/pest/<pet_id>/
+Endpoint: api/pets/<pet_id>/
 Verbo HTTP: DELETE
 Objetivo: Deleção de pet
 ```
